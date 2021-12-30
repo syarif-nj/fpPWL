@@ -1,7 +1,7 @@
 <script src="/js/bootstrap.js"></script>
 <script src="/css/bootstrap.css"></script>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-75">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
   <div class="container-fluid">
     <a class="navbar-brand  mx-5" href="index.php">
       <span>
@@ -53,6 +53,7 @@
                 $_SESSION[username]
               </button>
               <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='dropdownMenuButton1'>
+                <li><a class='dropdown-item' href='Admin/admin.php'>Akun</a></li>
                 <li><a class='dropdown-item' href='Admin/siswa.php'>Siswa</a></li>
                 <li><a class='dropdown-item' href='Admin/guru.php'>Guru</a></li>
                 <li><a class='dropdown-item' href='Admin/mapel.php'>Mata Pelajaran</a></li>

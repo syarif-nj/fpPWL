@@ -21,7 +21,7 @@
       ?>
 
       <br>
-      <p class="fs-2 text-primary d-flex justify-content-center">Halaman Pesan Dari Pengunjung</p><br><br>
+      <p class="fs-2 text-primary d-flex justify-content-center">Halaman Data Guru</p><br><br>
       <table border=1 class="table table-bordered shadow">
         <tr>
           <td><b>NIP</b></td>

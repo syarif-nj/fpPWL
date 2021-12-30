@@ -13,7 +13,7 @@
 <body>
   <?php include ('../navbar1.php'); ?>
   <div id="Pengumuman">
-    <div class="container roma-batasan">
+    <div class="container">
       <?php
       $sql="SELECT * FROM murid WHERE username = '$_SESSION[username]'";
       $query=mysqli_query($conn, $sql);
@@ -44,11 +44,10 @@
                   <td class='text-left'> $data[Email] </td>
                   <td> $data[No_HP] </td>
                   <td> $data[Isi] </td>
-                  <!--<td width='100'> <a href='proses_hapus_mail.php?hapus=$data[Email]'> Hapus</a> </td>-->
+                  <td width='100'> <a onclick='return confirm(\'Apakah anda yakin akan menghapus?\')'
+                  href='proses_hapus_mail.php?hapus=$data[4]'> Hapus</a> </td>
                 </tr>";
         }
-        //$kode=$_GET['hapus'];
-        //echo	"<script>	alert('$kode'); </script>";
         ?>
       </table>
     </div>

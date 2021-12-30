@@ -12,12 +12,33 @@
   <title>Kontak Kami</title>
   </head>
   <body>
+    
+    <div class="shadow">
     <?php include ('navbar.php'); ?>
+    </div>
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
-      <form action="proses_contact_us.php" method="POST" class="row g-3 border shadow rounded-bottom-up bg-light bg-opacity-75"  style="border-radius: 25px; padding: 25px;">
+      <form action="proses_contact_us.php" method="POST" class="row g-3 border shadow-lg rounded-bottom-up bg-light bg-opacity-75"  style="border-radius: 25px; padding: 25px;">
         <h2 class="text-center fw-bold">Kontak Kami</h2>
           <div class="col-6 col-md-4">
             <h3>kontak</h3>
+            <br>
+            <table>
+              <tr>
+                <td>Email</td><td>: smaunggul@mail.com</td>
+              </tr>
+              <tr>
+                <td>Phone</td><td>: +6281298762345</td>
+              </tr>
+              <tr>
+                <td>IG</td><td>: @sma_unggul</td>
+              </tr>
+              <tr>
+                <td>Fb</td><td>: sma_unggul</td>
+              </tr>
+              <tr>
+                <td>Address</td><td>: Jl. Pendidikan KM.3 Imogiri, Bantul</td>
+              </tr>
+            </table>
           </div>
           <div class="col-sm-6 col-md-8">
             <div class="row g-3">

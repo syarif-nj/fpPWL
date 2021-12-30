@@ -11,7 +11,7 @@
         </div>
         <div class="col">
         <span class=" h2 fw-bold text-primary">SMA UNGGUL</span>
-        <p style="font-size: small;">mendidik menjadi generasi unggul</p>
+        <p style="font-size: small;">Mendidik menjadi generasi unggul</p>
         </div>
       </div>
       </span>
@@ -53,10 +53,14 @@
                 $_SESSION[username]
               </button>
               <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='dropdownMenuButton1'>
-                <li><a class='dropdown-item' href='#'>Action</a></li>
-                <li><a class='dropdown-item' href='#'>Guru</a></li>
-                <li><a class='dropdown-item' href='#'>Siswa</a></li>
-                <li
+              <li><a class='dropdown-item' href='admin.php'>Akun</a></li>
+              <li><a class='dropdown-item' href='siswa.php'>Siswa</a></li>
+              <li><a class='dropdown-item' href='guru.php'>Guru</a></li>
+              <li><a class='dropdown-item' href='mapel.php'>Mata Pelajaran</a></li>
+              <li><a class='dropdown-item' href='#'>Galeri</a></li>
+              <li><a class='dropdown-item' href='pengumuman.php'>Pengumuman</a></li>
+              <li><a class='dropdown-item' href='mail.php'>Pesan</a></li>
+              <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
               </ul>
             </div>
             ";
@@ -82,9 +86,9 @@
                 $_SESSION[username]
               </button>
               <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='dropdownMenuButton1'>
-                <li><a class='dropdown-item' href='index.php'>Melihat Nilai</a></li>
-                <li><a class='dropdown-item' href='pengumuman.php'>Melihat Pengumumam</a></li>
-                <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
+              <li><a class='dropdown-item' href='index.php'>Melihat Nilai</a></li>
+              <li><a class='dropdown-item' href='pengumumam.php'>Melihat Pengumumam</a></li>
+              <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
               </ul>
             </div>
             ";

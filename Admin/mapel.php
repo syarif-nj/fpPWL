@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
-  <?php include ('../navbar1.php'); ?>
-  <div id="Pengumuman">
+  <?php include ('../navbar1.php');
+  ?>
+  <div id="mapel">
     <div class="container roma-batasan">
       <?php
       $sql="SELECT * FROM murid WHERE username = '$_SESSION[username]'";
@@ -21,7 +22,7 @@
       ?>
 
       <br>
-      <p class="fs-2 text-primary d-flex justify-content-center">Halaman Pesan Dari Pengunjung</p><br><br>
+      <p class="fs-2 text-primary d-flex justify-content-center">Halaman Data Mata Pelajaran</p><br><br>
       <table border=1 class="table table-bordered shadow">
         <tr>
           <td><b>Id Mapel</b></td>
@@ -36,14 +37,14 @@
         $hasil=mysqli_query($conn,$tampil);
         while ($data=mysqli_fetch_array($hasil))
         {
-            echo "
-                <tr>
-                  <td> $data[id_mapel] </td>
-                  <td class='text-left'> $data[nama_mapel] </td>
-                  <td class='text-left'> $data[kelas] </td>
-                  <td> $data[penjurusan] </td>
-                  <td width='100'> <a href='proses_hapus_mapel.php?id='.$data[id_mapel].''> Hapus</a> </td>
-                </tr>";
+            echo '<tr>
+                  <td>'.$data[0].'</td>
+                  <td class="text-left">'.$data[1].'</td>
+                  <td class="text-left">'.$data[2].'</td>
+                  <td>'.$data[3].'</td>
+                  <td width="100"> <a onclick="return confirm(\'Apakah anda yakin akan menghapus?\')"
+                  href="proses_hapus_mapel.php?id='.$data[0].'">Hapus </a> </td>
+                </tr>';
         }
         //$kode=$_GET['hapus'];
         //echo	"<script>	alert('$kode'); </script>";

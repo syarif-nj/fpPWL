@@ -49,16 +49,16 @@
         </tr>
         <?php
         include ('../koneksi_db.php');
-        $tampil="SELECT * FROM `pesan` ORDER BY `pesan`.`tanggal` ASC ";
+        $tampil="SELECT * FROM `pengumumam` ";
         $hasil=mysqli_query($conn,$tampil);
         while ($data=mysqli_fetch_array($hasil))
         {
             echo "
                 <tr>
-                    <td> $data[tanggal] </td>
-                    <td class='text-left'> $data[kelas] </td>
-                    <td class='text-left'> $data[subject] </td>
-                    <td> $data[isi] </td>
+                    <td> $data[1] </td>
+                    <td class='text-left'> $data[2] </td>
+                    <td class='text-left'> $data[3] </td>
+                    <td> $data[4] </td>
                 </tr>";
         }
         ?>
