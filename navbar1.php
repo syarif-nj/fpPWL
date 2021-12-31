@@ -53,7 +53,7 @@
                 $_SESSION[username]
               </button>
               <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='dropdownMenuButton1'>
-              <li><a class='dropdown-item' href='admin.php'>Akun</a></li>
+              <li><a class='dropdown-item' href='admin.php'>Admin</a></li>
               <li><a class='dropdown-item' href='siswa.php'>Siswa</a></li>
               <li><a class='dropdown-item' href='guru.php'>Guru</a></li>
               <li><a class='dropdown-item' href='mapel.php'>Mata Pelajaran</a></li>
@@ -72,7 +72,7 @@
                 $_SESSION[username]
               </button>
               <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
-                <li><a class='dropdown-item' href='#'>Nilai siswa</a></li>
+                <li><a class='dropdown-item' href='index.php'>Nilai siswa</a></li>
                 <li><a class='dropdown-item' href='pengumuman.php'>Pengumumam</a></li>
                 <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
               </ul>
@@ -87,7 +87,7 @@
               </button>
               <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='dropdownMenuButton1'>
               <li><a class='dropdown-item' href='index.php'>Melihat Nilai</a></li>
-              <li><a class='dropdown-item' href='pengumumam.php'>Melihat Pengumumam</a></li>
+              <li><a class='dropdown-item' href='pengumuman.php'>Melihat Pengumumam</a></li>
               <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
               </ul>
             </div>

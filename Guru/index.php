@@ -13,6 +13,43 @@
 <body>
     <?php include ('../navbar1.php'); ?>
 
+    <div class="clearfix"> </div> 
+	
+<!-- Pilih Mata Pelajaran -->
+<div id="Pilih_Mata_Pelajaran">
+	<div class="container roma-batasan">
+	<form action="Nilai.php" method="post">
+	<table class="table roma-table" border=0>
+		<tr>
+			<td>Mata Pelajaran :</td>
+			<td>
+				<select name="Mata_Pelajaran">
+                    <?php
+                    $cari_guru="SELECT * FROM `guru` WHERE username= '$_SESSION[username]' ";
+                    $hasil_guru=mysqli_query($conn,$cari_guru);
+                    $data_guru=mysqli_fetch_array($hasil_guru);
+
+                    $tampil="SELECT * FROM `mapel` WHERE nip = '$data_guru[nip]'";
+                    $hasil=mysqli_query($conn,$tampil);
+
+                    while ($data=mysqli_fetch_array($hasil))
+                    {
+                        echo "	<option value='$data[nama_mapel]'>$data[nama_mapel]</option> ";
+                    }
+                    ?>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan=2 align="left" ><button class="btn btn-primary"> Tampilkan </button> </td>
+		</tr>
+	</table>
+	</form>
+	</div>
+</div>
+
+
     <div id="Laporan Nilai">
         <div class="container roma-batasan">
             <?php
