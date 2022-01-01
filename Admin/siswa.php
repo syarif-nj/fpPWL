@@ -10,7 +10,7 @@
 } else {*/
   include ("../navbar1.php");
   include ("../koneksi_db.php");
-    $link = "proses_guru.php";
+    $link = "proses_siswa.php";
     switch (isset($_GET['act'])) {
         case 'editor':
           if (isset($_GET['id'])) {
@@ -24,7 +24,8 @@
                 $aksi = "update";
                 $readonly="readonly";
             } else {
-                $nisn=""; $nama=""; $username=""; $kelas=""; $penjurusan=""; $gender=""; $alamat=""; $agama="";
+                $nisn=""; $nama=""; $username=""; $kelas="Pilih Kelas"; $penjurusan="Pilih Jurusan"; 
+                $gender="Pilih Jenis Kelamin"; $alamat=""; $agama="Pilih Agama";
                 $aksi = "insert";
                 $readonly="";
             }
@@ -52,7 +53,7 @@
                     <div class="form-group">
                         <label for="nama">Kelas :</label>
                         <select class="form-select" name="kelas" id="kelas">
-                          <option selected>Pilih Kelas</option>
+                          <option selected value="<?php echo $kelas; ?>"><?php echo $kelas; ?></option>
                           <option value="10">10</option>
                           <option value="12">11</option>
                           <option value="13">12</option>
@@ -61,7 +62,7 @@
                     <div class="form-group">
                         <label for="nama">Penjurusan :</label>
                         <select class="form-select" name="penjurusan" id="penjurusan">
-                          <option selected>Pilih Penjurusan</option>
+                          <option selected value="<?php echo $penjurusan; ?>"><?php echo $penjurusan; ?></option>
                           <option value="IPA">IPA</option>
                           <option value="IPS">IPS</option>
                         </select>
@@ -69,7 +70,7 @@
                     <div class="form-group">
                         <label for="nama">Jenis Kelamin :</label>
                         <select class="form-select" name="gender" id="gender">
-                          <option selected>Pilih Jenis Kelamin</option>
+                          <option selected value="<?php echo $gender; ?>"><?php echo $gender; ?></option>
                           <option value="Laki-laki">Laki-laki</option>
                           <option value="Perempuan">Perempuan</option>
                         </select>
@@ -77,7 +78,7 @@
                     <div class="form-group">
                         <label for="nama">Agama :</label>
                         <select class="form-select" name="agama" id="agama">
-                          <option selected>Pilih Jenis Kelamin</option>
+                        <option selected value="<?php echo $agama; ?>"><?php echo $agama; ?></option>
                           <option value="Islam">Islam</option>
                           <option value="Kristen">Kristen</option>
                           <option value="Katolik">Katolik</option>
@@ -133,9 +134,9 @@
                     <td>'.$data[5].'</td>
                     <td>'.$data[6].'</td>
                     <td>'.$data[7].'</td>
-                    <td><a href="?menu=admin&act=editor&id=' . $data[2] . '">Edit </a>||
+                    <td><a href="?menu=admin&act=editor&id=' . $data[1] . '">Edit </a>||
                         <a onclick="return confirm(\'Apakah anda yakin akan menghapus?\')"
-                            href="' . $link . '?&act=delete&id='. $data[2].'">Hapus</a>
+                            href="' . $link . '?&act=delete&id='. $data[1].'">Hapus</a>
                     </td>
                   </tr>';
           }

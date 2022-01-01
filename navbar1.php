@@ -57,7 +57,6 @@
               <li><a class='dropdown-item' href='siswa.php'>Siswa</a></li>
               <li><a class='dropdown-item' href='guru.php'>Guru</a></li>
               <li><a class='dropdown-item' href='mapel.php'>Mata Pelajaran</a></li>
-              <li><a class='dropdown-item' href='#'>Galeri</a></li>
               <li><a class='dropdown-item' href='pengumuman.php'>Pengumuman</a></li>
               <li><a class='dropdown-item' href='mail.php'>Pesan</a></li>
               <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
