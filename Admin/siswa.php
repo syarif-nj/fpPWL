@@ -3,11 +3,6 @@
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../js/bootstrap.js">
 <?php
-/*if (empty($_SESSION['username']) AND empty($_SESSION['password'])) {
-    echo "<link href='style.css' rel='stylesheet' type='text/css'>
- <center>Untuk mengakses modul, Anda harus login <br>";
-    echo "<a href=../../index.php><b>LOGIN</b></a></center>";
-} else {*/
   include ("../navbar1.php");
   include ("../koneksi_db.php");
     $link = "proses_siswa.php";
@@ -147,5 +142,4 @@
     <?php
     include ("../footer.php");
 }
-//}
 ?>

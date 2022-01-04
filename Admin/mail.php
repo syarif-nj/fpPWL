@@ -44,7 +44,7 @@
                   <td class='text-left'> $data[Email] </td>
                   <td> $data[No_HP] </td>
                   <td> $data[Isi] </td>
-                  <td width='100'> <a onclick='return confirm(\'Apakah anda yakin akan menghapus?\')'
+                  <td width='120'> <a onclick='return confirm(\'Apakah anda yakin akan menghapus?\')'
                   href='proses_hapus_mail.php?hapus=$data[4]'> Hapus</a> </td>
                 </tr>";
         }
