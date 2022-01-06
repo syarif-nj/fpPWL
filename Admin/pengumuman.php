@@ -11,8 +11,10 @@
   <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
-  <?php include ('../navbar1.php'); ?>
-  <div id="Pengumuman">
+    <div class="shadow">
+        <?php include ('../navbar1.php'); ?>
+    </div><br>
+    <div id="Pengumuman">
     <div class="container roma-batasan">
       <br>
       <p class="fs-2 text-primary d-flex justify-content-center">Halaman Pengumuman</p><br>

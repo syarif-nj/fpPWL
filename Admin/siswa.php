@@ -2,8 +2,10 @@
 
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../js/bootstrap.js">
+<div class="shadow">
+        <?php include ('../navbar1.php'); ?>
+</div><br>
 <?php
-  include ("../navbar1.php");
   include ("../koneksi_db.php");
     $link = "proses_siswa.php";
     switch (isset($_GET['act'])) {

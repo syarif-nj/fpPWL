@@ -26,17 +26,17 @@
         <tr>
           <td> Nama </td>
           <td> : </td>
-          <td> <input type="text" id="nama" value="<?php echo $data['nama_murid']; ?>" Readonly > </td>
+          <td> <input class="border-0" type="text" id="nama" value="<?php echo $data['nama_murid']; ?>" Readonly > </td>
         </tr>
         <tr>
           <td> Kelas </td>
           <td> : </td>
-          <td> <input type="text" id="kelas" value="<?php echo $data['kelas']; ?>" Readonly > </td>
+          <td> <input class="border-0" type="text" id="kelas" value="<?php echo $data['kelas']; ?>" Readonly > </td>
         </tr>
         <tr>
           <td> Jurusan </td>
           <td> : </td>
-          <td> <input type="text" id="penjurusan" value="<?php echo $data['penjurusan']; ?>" Readonly > </td>
+          <td> <input class="border-0" type="text" id="penjurusan" value="<?php echo $data['penjurusan']; ?>" Readonly > </td>
         </tr>
       </table>
               <br><br>

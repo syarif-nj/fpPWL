@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
-  <?php include ('../navbar1.php'); ?>
-  <div id="Pengumuman">
+    <div class="shadow">
+        <?php include ('../navbar1.php'); ?>
+    </div><br>  <div id="Pengumuman">
     <div class="container">
       <?php
       $sql="SELECT * FROM murid WHERE username = '$_SESSION[username]'";
@@ -50,7 +51,7 @@
         }
         ?>
       </table>
-    </div>
+    </div><br><br><br>
     <?php include ('../footer.php'); ?>
   </div>
 </body>

@@ -19,8 +19,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
     <title>Login Page with Database</title>
   </head>
   <body>
-    <?php include ('navbar.php');?>
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
+    <div class="shadow">
+        <?php include ('../navbar.php'); ?>
+    </div><br>
+      <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
       <form class="border shadow p-3 rounded" action="proses_login.php" method="POST" style="width: 450px;">
         <h2>LOGIN</h2>
         <span>

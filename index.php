@@ -18,7 +18,7 @@
     <title>SMA UNGGUL</title>
   </head>
   <body>
-    <div>
+    <div class="shadow-lg">
     <?php include ('navbar.php'); ?>
     </div>
     <!--Slideshow-->
