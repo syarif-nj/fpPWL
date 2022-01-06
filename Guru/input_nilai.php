@@ -19,6 +19,7 @@
 
 <!-- Input Nilai -->
 <?php
+error_reporting(0);
 $cari_guru="SELECT * FROM `guru` WHERE username= '$_SESSION[username]' ";
 $hasil_guru=mysqli_query($conn,$cari_guru);
 $data_guru=mysqli_fetch_array($hasil_guru);

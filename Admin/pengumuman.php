@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
-    <div class="shadow">
+  <div class="shadow">
         <?php include ('../navbar1.php'); ?>
     </div><br>
     <div id="Pengumuman">

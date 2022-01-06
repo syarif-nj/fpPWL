@@ -20,7 +20,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
   </head>
   <body>
     <div class="shadow">
-        <?php include ('../navbar.php'); ?>
+        <?php include ('navbar.php'); ?>
     </div><br>
       <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
       <form class="border shadow p-3 rounded" action="proses_login.php" method="POST" style="width: 450px;">

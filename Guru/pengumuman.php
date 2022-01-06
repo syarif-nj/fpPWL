@@ -72,7 +72,7 @@
                   <td class="text-left">'.$data[3].'</td>
                   <td>'.$data[4].'</td>
                   <td width="100"> <a onclick="return confirm(\'Apakah anda yakin akan menghapus?\')"
-                  href="proses_pengumuman.php?id='.$data[0].'">Hapus </a> </td>
+                  href="proses_pengumuman.php?act=delete&id='.$data[0].'">Hapus </a> </td>
                 </tr>';
         }
         ?>
