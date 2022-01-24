@@ -30,14 +30,14 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <img src="Asset/SISWA5.jpg" class="d-block w-100" height="750" alt="...">
+          <img src="Asset/SISWA6.jpg" class="d-block w-100" height="750" alt="...">
           <div class="carousel-caption d-none d-md-block text-white">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="Asset/SISWA6.jpg" class="d-block w-100" height="750" alt="...">
+          <img src="Asset/siswa7.jpg" class="d-block w-100" height="750" alt="...">
           <div class="carousel-caption d-none d-md-block text-white">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>

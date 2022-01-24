@@ -46,7 +46,7 @@
                   <td> $data[No_HP] </td>
                   <td> $data[Isi] </td>
                   <td width='120'> <a onclick='return confirm(\'Apakah anda yakin akan menghapus?\')'
-                  href='proses_hapus_mail.php?hapus=$data[4]'> Hapus</a> </td>
+                  href='proses_hapus_mail.php?hapus=$data[0]'> Hapus</a> </td>
                 </tr>";
         }
         ?>

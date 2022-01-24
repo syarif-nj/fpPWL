@@ -70,9 +70,9 @@
               <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
                 $_SESSION[username]
               </button>
-              <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+              <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='dropdownMenuButton1'>
                 <li><a class='dropdown-item' href='index.php'>Nilai siswa</a></li>
-                <li><a class='dropdown-item' href='pengumuman.php'>Pengumumam</a></li>
+                <li><a class='dropdown-item' href='pengumuman.php'>Input Pengumumam</a></li>
                 <li><a class='dropdown-item' href='../logout.php'>Log out</a></li>
               </ul>
             </div>

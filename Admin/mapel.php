@@ -24,7 +24,7 @@
                 $readonly="";
             }
             ?>
-            <p class="fs-2 text-primary d-flex justify-content-center">Insert/Update Admin</p><br><br>
+            <p class="fs-2 text-primary d-flex justify-content-center">Insert/Update Mata Pelajaran</p><br><br>
             <div class="container" style="min-height: 100vh">
                 <form class="shadow bg-light bg-opacity-75" action="<?php echo $link; ?>?menu=admin&act=<?php echo $aksi; ?>" method=post id="frmmodul"
                 style="border-radius: 25px; padding: 25px;">

@@ -3,7 +3,7 @@ include ('../koneksi_db.php');
 
 
 $Kode = $_GET['hapus'];
-$sql = mysqli_query($conn,"DELETE FROM mail WHERE Isi = '$Kode'") or die("cek : " . $conn->error);
+$sql = mysqli_query($conn,"DELETE FROM mail WHERE id = '$Kode'") or die("cek : " . $conn->error);
 if($sql){
   header('location:mail.php');
 }else{

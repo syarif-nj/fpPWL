@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Jan 2022 pada 10.15
+-- Waktu pembuatan: 24 Jan 2022 pada 06.44
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.12
 
@@ -39,13 +39,13 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`username`, `password`, `level`) VALUES
 ('admin', 'c4ca4238a0b923820dcc509a6f75849b', 3),
-('admin2', 'c4ca4238a0b923820dcc509a6f75849b', 3),
+('admin2', '2ae117665ae566b1f2b6c27ea8016e35', 3),
 ('guru', 'c4ca4238a0b923820dcc509a6f75849b', 2),
 ('okky', 'c4ca4238a0b923820dcc509a6f75849b', 2),
-('roma', 'c4ca4238a0b923820dcc509a6f75849b', 2),
 ('siswasyarif', 'c4ca4238a0b923820dcc509a6f75849b', 1),
 ('syarif', 'e8059811450b854a7b77cc653761282d', 2),
-('udin', 'c4ca4238a0b923820dcc509a6f75849b', 1),
+('syarifsiswa', '906412364a0197f7fc17c596000bfd6c', 1),
+('tigasatu', '73fe721bb3ed8fad7a5713edcff75b2e', 1),
 ('udin1', 'c4ca4238a0b923820dcc509a6f75849b', 1),
 ('udin2', 'c4ca4238a0b923820dcc509a6f75849b', 1),
 ('udin3', 'c4ca4238a0b923820dcc509a6f75849b', 1),
@@ -81,8 +81,7 @@ CREATE TABLE `guru` (
 INSERT INTO `guru` (`nip`, `nama_guru`, `username`, `kelas`, `Penjurusan`, `gender`, `alamat`, `nohp`) VALUES
 ('1111111111', 'Hendika', 'hendika', '10', 'IPS', 'laki-laki', 'kota bantul', '081616161616'),
 ('1111111113', 'Okky', 'okky', '12', 'IPA', 'perempuan', 'kota bantul', '83838383838'),
-('231144321', 'Syarif Nurwahid Jaelani', 'syarif', '10', 'IPA', 'Laki-laki', 'JALAN MERDEKA', '08947392937292'),
-('239879279', 'Roma Debian', 'roma', '10', 'IPA', 'Laki-laki', 'jl ajasldfjsadjfk lasfdkjljasd lsfdjlkjfdaslk fsdl', '90433834094590549');
+('231144321', 'Syarif Nurwahid Jaelani', 'syarif', '10', 'IPA', 'Laki-laki', 'JALAN MERDEKA', '08947392937292');
 
 -- --------------------------------------------------------
 
@@ -98,6 +97,13 @@ CREATE TABLE `mail` (
   `No_HP` varchar(20) DEFAULT NULL,
   `Isi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `mail`
+--
+
+INSERT INTO `mail` (`id`, `Tanggal`, `Nama`, `Email`, `No_HP`, `Isi`) VALUES
+(2, '06-01-2022', 'syarif nj', 'syarif@gmail.com', '080908098098', 'ini adalah pesan peringatan dari user web ini......');
 
 -- --------------------------------------------------------
 
@@ -119,7 +125,8 @@ CREATE TABLE `mapel` (
 
 INSERT INTO `mapel` (`id_mapel`, `nama_mapel`, `kelas`, `penjurusan`, `nip`) VALUES
 ('231231241234', 'KIMIA', 10, 'IPA', '1111111111'),
-('5523532', 'fisika', 12, 'IPA', '1111111113');
+('5523532', 'fisika', 12, 'IPA', '1111111113'),
+('bg01', 'sosiologi', 10, 'IPS', '1111111113');
 
 -- --------------------------------------------------------
 
@@ -152,10 +159,9 @@ INSERT INTO `murid` (`nisn`, `username`, `nama_murid`, `kelas`, `penjurusan`, `g
 ('10027', 'udin7', 'udin tujuh', 12, 'IPA', 'laki-laki', 'islam', 'bantul'),
 ('10028', 'udin8', 'udin delapan', 12, 'IPA', 'laki-laki', 'islam', 'bantul'),
 ('10029', 'udin9', 'udin sembilan', 12, 'IPA', 'laki-laki', 'islam', 'bantul'),
-('1111111111', 'udin', 'Udin', 10, 'IPA', 'Laki-laki', 'islam', 'kota bantul'),
-('1111111119', 'kanna', 'Kanna Kamui', 10, 'IPA', 'Perempuan', 'islam', 'kota bantul'),
+('10031', 'tigasatu', 'siswa tiga satu', 10, 'IPA', 'Laki-laki', 'Islam', 'kota bantul'),
+('10032', 'syarifsiswa', 'syarif aja', 13, 'IPA', 'Laki-laki', 'Islam', 'kota bantul'),
 ('123212', 'yadi', 'yadi', 10, 'IPA', 'Laki-laki', 'Islam', 'bantul'),
-('1234123215', 'yasan', 'ilyasan', 11, 'IPS', 'Laki-laki', 'islam', 'kota bantul'),
 ('2204884394', 'siswasyarif', 'syarif nj', 10, 'IPA', 'Laki-laki', 'Islam', 'adelah');
 
 -- --------------------------------------------------------
@@ -182,15 +188,18 @@ INSERT INTO `nilai` (`nama_murid`, `kelas`, `penjurusan`, `nama_mapel`, `nilai_U
 ('Udin', '10', 'IPA', 'KIMIA', 77, 88),
 ('Udin', '10', 'IPA', 'BIOLOGI', 100, 100),
 ('andi', '10', 'ipa', 'biologi', 0, 0),
-('udin tiga', '12', 'IPA', 'fisika', 90, 90),
-('udin dua', '12', 'IPA', 'fisika', 56, 89),
-('udin satu', '12', 'IPA', 'fisika', 43, 67),
-('udin empat', '12', 'IPA', 'fisika', 67, 67),
+('udin tiga', '12', 'IPA', 'fisika', 100, 98),
+('udin dua', '12', 'IPA', 'fisika', 100, 100),
+('udin satu', '12', 'IPA', 'fisika', 100, 67),
+('udin empat', '12', 'IPA', 'fisika', 100, 67),
 ('udin lima', '12', 'IPA', 'fisika', 87, 67),
 ('udin enam', '12', 'IPA', 'fisika', 78, 67),
 ('udin tujuh', '12', 'IPA', 'fisika', 86, 56),
 ('udin delapan', '12', 'IPA', 'fisika', 78, 67),
-('udin sembilan', '12', 'IPA', 'fisika', 98, 56);
+('udin sembilan', '12', 'IPA', 'fisika', 98, 56),
+('Kanna Kamui', '10', 'IPA', 'BIOLOGI', 98, 98),
+('yadi', '10', 'IPA', 'BIOLOGI', 98, 67),
+('syarif nj', '10', 'IPA', 'BIOLOGI', 98, 87);
 
 -- --------------------------------------------------------
 
@@ -211,9 +220,8 @@ CREATE TABLE `pengumumam` (
 --
 
 INSERT INTO `pengumumam` (`id`, `tanggal`, `kelas`, `subject`, `isi`) VALUES
-(1, '1', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Kang Koding'),
-(20, '31-12-2021', '', '', ''),
-(21, '31-12-2021', '12', 'percobaan 2', 'ini adalah pesan percobaan ke dua');
+(24, '23-01-2022', '10', 'libur', 'karena besok tanggal merah'),
+(25, '23-01-2022', '10', 'libur', 'dikarenakan besok tanggal merah');
 
 --
 -- Indexes for dumped tables
@@ -266,13 +274,13 @@ ALTER TABLE `pengumumam`
 -- AUTO_INCREMENT untuk tabel `mail`
 --
 ALTER TABLE `mail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengumumam`
 --
 ALTER TABLE `pengumumam`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
